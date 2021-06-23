@@ -6,6 +6,6 @@ namespace Model.DTOs
 {
     public class GenDto
     { 
-        public string[] adn { get; set; }
+        public string[] dna { get; set; }
     }
 }

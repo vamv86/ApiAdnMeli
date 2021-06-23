@@ -8,7 +8,6 @@ namespace Service.Interface
 {
     public interface IMutantServiceQuery
     {
-        bool IsMutant(string[] adn);
         Task<ContentDnaResponse> GetStats();
     }
 }

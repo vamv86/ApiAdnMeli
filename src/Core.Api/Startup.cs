@@ -39,6 +39,7 @@ namespace Core.Api
             // Services
             services.AddTransient<IMutantServiceQuery, MutantServiceQuery>();
             services.AddTransient<IMutantServiceCreate, MutantServiceCreate>();
+            services.AddTransient<IMutantLogic, MutantLogic>();
 
             //AutoMapper
             services.AddAutoMapper(typeof(Startup));

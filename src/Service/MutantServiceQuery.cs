@@ -18,7 +18,6 @@ namespace Service
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
-
         public MutantServiceQuery(
             ApplicationDbContext context,
             IMapper mapper
@@ -26,19 +25,6 @@ namespace Service
         {
             _context = context;
             _mapper = mapper;
-        }
-
-        public bool IsMutant(string [] adn)
-        {
-
-            //Se llena una lista con todas las combinaciones posibles para detectar los genes mutantes
-            List<string> mutantGenList = AdnCommon.GetListCombinations(adn);
-
-            //Se define las secuencias de bases nitrogenadas en los genes que determinan si es o no mutante
-            string[] genes = { "AAAA", "TTTT", "GGGG", "CCCC" };
-
-            // Retorna false o true si encuentra coincidencias.
-            return mutantGenList.Any(x=> genes.Any(gen => x.Contains(gen))); 
         }
 
         public async Task<ContentDnaResponse> GetStats()
@@ -63,9 +49,9 @@ namespace Service
                 response.count_mutant_dna = query.Where(x=> x.ismutant).Sum(x => x.cantidad);
                 response.ratio = double.Parse ( String.Format("{0:00.0}",  response.count_mutant_dna / double.Parse(response.count_human_dna.ToString()) ));
 
-                return new ContentDnaResponse { ADN =response };
+                return new ContentDnaResponse { DNA =response };
             }
             return new ContentDnaResponse();
-        }
+        }         
     }
 }
