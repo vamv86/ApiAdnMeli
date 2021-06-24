@@ -48,9 +48,9 @@ Ahora se debe ejecutar desde el visual estudio el proyecto Core.api para que las
 
 URL local: https://localhost:44317/
 
-URL AWS: http://adnmutant.us-east-2.elasticbeanstalk.com/
+URL EN AWS: http://adnmutant.us-east-2.elasticbeanstalk.com/
 
-URL Externa: http://amisauro1-001-site1.gtempurl.com/
+URL Externa Hosting: http://amisauro1-001-site1.gtempurl.com/
 
 
 ### Servicios
