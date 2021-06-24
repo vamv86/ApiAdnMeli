@@ -103,7 +103,7 @@ adn: {“count_mutant_dna”:40, “count_human_dna”:100: “ratio”:0.4}
 
 #### Automaticos
 
-Para la ejecucion de los test automaticos utilice visual studio para evitar la ejecución por comandos.
+Para la ejecución de los test automáticos usar visual studio para evitar la ejecución por comandos.
 En el proyecto de Service.Test dar click derecho y ejecutar pruebas unitarias.
 
 
